@@ -15,9 +15,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url("/img/bdimg2.jpg");
+        background-image: url("/img/bdimg3.jpg");
         background-size: 100%;
-        backdrop-filter: blur(50px);
+        /* backdrop-filter: blur(50px);*/
     }
 
 
@@ -28,10 +28,14 @@
         height: 40px;
         opacity: 1;
         border-radius: 30px;
-        background: rgba(204, 204, 204, 0.5);
+        background: rgba(210, 210, 210, 0.3);
         border: 1px solid rgba(255, 255, 255, 1);
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(30px);
+    }
+
+    .searchBox:hover {
+        box-shadow: 0 0 30px rgba(80, 80, 80, 0.5);
     }
 
     #searchText {
@@ -42,7 +46,7 @@
         background: rgba(0, 0, 0, 0);
         outline: none;
         font-size: 20px;
-        color: #c8c8c8;
+        color: white;
     }
 
     #searchButton {
