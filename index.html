@@ -4,97 +4,15 @@
     <meta charset="UTF-8">
     <title>传送门</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url("/img/bdimg3.jpg");
-        background-size: 100%;
-        /* backdrop-filter: blur(50px);*/
-    }
-
-
-    .searchBox {
-        margin-top: 260px;
-        padding: 10px;
-        width: 600px;
-        height: 40px;
-        opacity: 1;
-        border-radius: 30px;
-        background: rgba(210, 210, 210, 0.3);
-        border: 1px solid rgba(255, 255, 255, 1);
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(30px);
-    }
-
-    .searchBox:hover {
-        box-shadow: 0 0 30px rgba(80, 80, 80, 0.5);
-    }
-
-    #searchText {
-        width: 480px;
-        height: 40px;
-        margin: 0 10px;
-        border: 0;
-        background: rgba(0, 0, 0, 0);
-        outline: none;
-        font-size: 20px;
-        color: white;
-    }
-
-    #searchButton {
-        width: 90px;
-        height: 40px;
-        border: none;
-        border-radius: 20px;
-        background-color: rgba(200, 200, 200, 0.5);
-        font-size: 16px;
-    }
-    
-    .developer {
-        position: absolute;
-        bottom: 20px;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 14px;
-    }
-
-</style>
+<link rel="stylesheet" href="/css/index.css">
 <body>
+
 <div class="searchBox">
     <input id="searchText" type="text">
     <button id="searchButton">搜索</button>
 </div>
 <div class="developer">Designed & Developed by MING</div>
+
 </body>
-<script>
-    let a = document.getElementById('searchText')
-    let b = document.getElementById('searchButton')
-    console.log(a.value)
-    b.onclick = search
-
-    /* 使用百度搜送*/
-    function search() {
-        window.open("https://www.baidu.com/s?wd=" + a.value)
-    }
-
-    /*生成随机.com网址，并跳转*/
-    function searchCom() {
-
-    }
-
-    /*监听键盘点击事件*/
-    a.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            search()
-        }
-    })
-
-</script>
+<script src="/js/index.js"></script>
 </html>
