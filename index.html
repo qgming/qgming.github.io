@@ -2,17 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>传送门</title>
+    <title>MOON</title>
 </head>
-<link rel="stylesheet" href="/css/index.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("/img/bdimg3.jpg");
+        background-size: 100%;
+        /* backdrop-filter: blur(50px);*/
+    }
+    .search {
+        position: relative;
+    }
+
+    .searchBox {
+        display: flex;
+        flex-flow: row;
+        margin-top: 260px;
+        padding: 10px;
+        width: 600px;
+        height: 40px;
+        opacity: 1;
+        border-radius: 30px;
+        background: rgba(210, 210, 210, 0.3);
+        border: 1px solid rgba(255, 255, 255, 1);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(30px);
+    }
+
+    #searchT {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(200, 200, 200, 0.5);
+    }
+
+    .searchBox:hover {
+        box-shadow: 0 0 30px rgba(80, 80, 80, 0.5);
+    }
+
+    #searchText {
+        width: 450px;
+        height: 40px;
+        margin: 0 10px;
+        border: 0;
+        background: rgba(0, 0, 0, 0);
+        outline: none;
+        font-size: 20px;
+        color: white;
+    }
+
+    #searchButton {
+        width: 90px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgba(200, 200, 200, 0.5);
+        font-size: 16px;
+    }
+
+    #searchOption {
+        display: none;
+        position: relative;
+        top: 10px;
+        width: 200px;
+        height: 316px;
+        border: 1px solid white;
+        border-radius: 16px;
+        background: rgba(210, 210, 210,0.5);
+        color: white;
+       /* overflow: auto;
+        overflow-x: hidden;*/
+        /*backdrop-filter: blur(30px);*/
+    }
+    .option {
+        padding: 10px;
+    }
+    .option li {
+        width: 180px;
+        height: 30px;
+        margin-bottom: 8px;
+        background-color: rgba(200, 200, 200, 0.6);
+        border-radius: 9px;
+        line-height: 30px;
+    }
+
+    .developer {
+        position: absolute;
+        bottom: 20px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+    }
+</style>
 <body>
-
-<div class="searchBox">
-    <input id="searchText" type="text">
-    <button id="searchButton">搜索</button>
+<div class="search">
+    <div class="searchBox">
+        <div id="searchT"></div>
+        <input id="searchText" type="text">
+        <button id="searchButton">搜索</button>
+    </div>
+    <div id="searchOption">
+        <ul class="option">
+            <li id="url1" data-url="https://www.baidu.com/s?wd=">&nbsp;&nbsp;百度</li>
+            <li id="url2" data-url="https://bing.com/search?q=">&nbsp;&nbsp;Bing</li>
+            <li id="url3" data-url="https://www.google.com/search?q=">&nbsp;&nbsp;Google</li>
+            <li id="url4" data-url="http://quark.sm.cn/s?q=">&nbsp;&nbsp;夸克搜索</li>
+            <li id="url5" data-url="https://www.bilibili.com/search?keyword=">&nbsp;&nbsp;哔哩哔哩</li>
+            <li id="url6" data-url="https://www.so.com/s?q=">&nbsp;&nbsp;360搜索</li>
+            <li id="url7" data-url="https://duckduckgo.com/?q=">&nbsp;&nbsp;DuckDuckGo</li>
+            <li id="url8" data-url="https://yandex.com/search/?text=">&nbsp;&nbsp;Yandex</li>
+        </ul>
+    </div>
 </div>
-<div class="developer">Designed & Developed by MING version:0.1</div>
 
+<div class="developer">Designed & Developed by MING
+    <div>Version 0.1</div>
+</div>
 </body>
 <script src="/js/index.js"></script>
 </html>
