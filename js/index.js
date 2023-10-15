@@ -1,3 +1,4 @@
+//JS BY MING
 let a = document.getElementById('searchText')
 let b = document.getElementById('searchButton')
 let c = document.getElementById('searchOption')
