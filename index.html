@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MOON-月球</title>
-     <link rel="shortcut icon" href="/img/international.png" type="image/x-icon">
+    <title>MOON</title>
+    <link rel="shortcut icon" href="/img/international.png" type="image/x-icon">
 </head>
 <style>
     * {
@@ -17,10 +17,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         background-image: url("/img/bdimg3.jpg");
         background-size: 100%;
         /* backdrop-filter: blur(50px);*/
     }
+    #dayTime {
+        margin-top: 80px;
+        font-size: 100px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+    }
+
     .search {
         position: relative;
     }
@@ -28,7 +37,7 @@
     .searchBox {
         display: flex;
         flex-flow: row;
-        margin-top: 260px;
+        margin-top: 60px;
         padding: 10px;
         width: 600px;
         height: 40px;
@@ -105,6 +114,11 @@
         border-radius: 9px;
         line-height: 30px;
     }
+    .option li:hover{
+        background-color: rgba(140, 140, 140, 0.6);
+        box-shadow: 1px 1px 10px rgba(20, 20, 20, 0.5);
+
+    }
 
     .developer {
         position: absolute;
@@ -114,6 +128,7 @@
     }
 </style>
 <body>
+<div id="dayTime">time</div>
 <div class="search">
     <div class="searchBox">
         <div id="searchT"><img src="/img/international.png" alt=""></div>
@@ -135,7 +150,7 @@
 </div>
 
 <div class="developer">Designed & Developed by MING
-    <div>Version 0.1</div>
+    <div>Version 0.2</div>
 </div>
 </body>
 <script src="/js/index.js"></script>
