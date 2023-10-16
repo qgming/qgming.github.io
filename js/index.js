@@ -13,32 +13,46 @@ let url6 = document.getElementById('url6')
 let url7 = document.getElementById('url7')
 let url8 = document.getElementById('url8')
 
+/*document.body.addEventListener("click", function() {
+    if(c.style.display === "flex"){
+        c.style.display = "none"
+    }
+})*/
+
 b.onclick = search
 d.onclick = searchOption
-url1.onclick = function (){
-    Toast('百度，启动',1000)
-    url = url1.dataset.url}
-url2.onclick = function (){
-    Toast('必应，启动',1000)
-    url = url2.dataset.url}
-url3.onclick = function (){
-    Toast('谷歌，启动',1000)
-    url = url3.dataset.url}
-url4.onclick = function (){
-    Toast('夸克，启动',1000)
-    url = url4.dataset.url}
-url5.onclick = function (){
-    Toast('哔哩哔哩，启动',1000)
-    url = url5.dataset.url}
-url6.onclick = function (){
-    Toast('360启动',1000)
-    url = url6.dataset.url}
-url7.onclick = function (){
-    Toast('Duck，启动',1000)
-    url = url7.dataset.url}
-url8.onclick = function (){
-    Toast('Yandex，启动',1000)
-    url = url8.dataset.url}
+url1.onclick = function () {
+    Toast('百度，启动', 1000)
+    url = url1.dataset.url
+}
+url2.onclick = function () {
+    Toast('必应，启动', 1000)
+    url = url2.dataset.url
+}
+url3.onclick = function () {
+    Toast('谷歌，启动', 1000)
+    url = url3.dataset.url
+}
+url4.onclick = function () {
+    Toast('夸克，启动', 1000)
+    url = url4.dataset.url
+}
+url5.onclick = function () {
+    Toast('哔哩哔哩，启动', 1000)
+    url = url5.dataset.url
+}
+url6.onclick = function () {
+    Toast('360启动', 1000)
+    url = url6.dataset.url
+}
+url7.onclick = function () {
+    Toast('Duck，启动', 1000)
+    url = url7.dataset.url
+}
+url8.onclick = function () {
+    Toast('Yandex，启动', 1000)
+    url = url8.dataset.url
+}
 
 
 /* 使用百度搜送*/
@@ -50,14 +64,14 @@ function search() {
     }
 }
 
-function searchOption(){
-    if(c.style.display === "none"){
+//引擎切换窗口
+function searchOption() {
+    if (c.style.display === "none") {
         c.style.display = "flex"
-    }else{
+    } else {
         c.style.display = "none"
     }
 }
-
 
 /*监听键盘点击事件*/
 a.addEventListener("keydown", function (event) {
@@ -66,17 +80,44 @@ a.addEventListener("keydown", function (event) {
     }
 })
 
+//获取时间
+function getTime() {
+    let time = new Date()
+    let year = time.getFullYear(),
+        month = time.getMonth() + 1,
+        date = time.getDate(),
+        hour = time.getHours(),
+        minute = time.getMinutes(),
+        second = time.getSeconds()
+    month = month < 10 ? '0' + month : month
+    date = date < 10 ? '0' + date : date
+    hour = hour < 10 ? '0' + hour : hour
+    minute = minute < 10 ? '0' + minute : minute
+    second = second < 10 ? '0' + second : second
+    let timeD = `${hour}:${minute}:${second}`
+    let timeY = `${year}/${month}/${date}`
+    let dTime = document.getElementById("dayTime")
+    console.log(dTime)
+    dTime.innerHTML = `<p>${timeD}</p><p class="tiemY" style="font-size: 20px ">${timeY}</p>`
+
+}
+
+timeer = setInterval(getTime, 1000)
+
+
 //toast弹窗
-function Toast(msg,duration){
-    duration=isNaN(duration)?3000:duration;
+function Toast(msg, duration) {
+    duration = isNaN(duration) ? 3000 : duration;
     let m = document.createElement('div');
     m.innerHTML = msg;
-    m.style.cssText="max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+    m.style.cssText = "max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
     document.body.appendChild(m);
-    setTimeout(function() {
+    setTimeout(function () {
         let d = 0.5;
         m.style.opacity = '0';
-        setTimeout(function() { document.body.removeChild(m) }, d * 1000);
+        setTimeout(function () {
+            document.body.removeChild(m)
+        }, d * 1000);
     }, duration);
 }
 
