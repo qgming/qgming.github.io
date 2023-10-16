@@ -5,175 +5,7 @@
     <title>MOON-月球</title>
     <link rel="shortcut icon" href="/img/international.png" type="image/x-icon">
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-
-    body {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-image: url("https://www.todaybing.com/api/today/cn?size=hd");
-        background-size: 100%;
-        /* backdrop-filter: blur(50px);*/
-    }
-
-    #dayTime {
-        margin-top: 100px;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
-
-    #day {
-        display: flex;
-        flex-flow: row;
-        color: rgba(255, 255, 255, 0.99);
-        font-size: 80px;
-        font-weight: 666;
-    }
-
-    .timeLittle {
-        width: 60px;
-        text-align: center;
-        line-height: 90px;
-    }
-
-    .little {
-        width: 100px;
-        text-align: center;
-    }
-
-    #oneDay {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 25px;
-        font-weight: 666;
-    }
-
-    .search {
-        position: relative;
-    }
-
-
-    .searchBox {
-        display: flex;
-        flex-flow: row;
-        margin-top: 60px;
-        padding: 10px;
-        width: 600px;
-        height: 40px;
-        opacity: 1;
-        border-radius: 30px;
-        background: rgba(210, 210, 210, 0.3);
-        border: 1px solid rgba(255, 255, 255, 1);
-        backdrop-filter: blur(30px);
-    }
-
-    #searchT {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: rgba(200, 200, 200, 0.5);
-        text-align: center;
-        line-height: 40px;
-        padding: 5px;
-    }
-
-    #searchT img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .searchBox:hover {
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    #searchText {
-        width: 450px;
-        height: 40px;
-        margin: 0 10px;
-        border: 0;
-        background: rgba(0, 0, 0, 0);
-        outline: none;
-        font-size: 20px;
-        color: white;
-    }
-
-    #searchButton {
-        width: 90px;
-        height: 40px;
-        border: none;
-        border-radius: 20px;
-        background-color: rgba(200, 200, 200, 0.5);
-        font-size: 16px;
-    }
-
-    #searchOption {
-        display: none;
-        position: relative;
-        top: 10px;
-        width: 200px;
-        height: 316px;
-        border: 1px solid white;
-        border-radius: 16px;
-        background: rgba(210, 210, 210, 0.3);
-        color: white;
-        backdrop-filter: blur(30px);
-        /* overflow: auto;
-         overflow-x: hidden;*/
-        /*backdrop-filter: blur(30px);*/
-    }
-
-    #searchOption:hover {
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .option {
-        padding: 10px;
-    }
-
-    .option li {
-        width: 180px;
-        height: 30px;
-        margin-bottom: 8px;
-        background-color: rgba(200, 200, 200, 0.6);
-        border-radius: 9px;
-        line-height: 30px;
-    }
-
-    .option li:hover {
-        background-color: rgba(140, 140, 140, 0.6);
-        box-shadow: 1px 1px 5px rgba(20, 20, 20, 0.5);
-
-    }
-
-    #hitokoto {
-        position: relative;
-        bottom: 30px;
-    }
-
-    #hitokoto_text {
-        text-align: center;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 16px;
-    }
-
-    .bottom {
-        position: absolute;
-        bottom: 20px;
-        text-align: center;
-    }
-
-    .developer {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 12px;
-    }
-</style>
+<link rel="stylesheet" href="/css/index.css">
 <body>
 <div id="dayTime">
     <div id="day">
@@ -210,19 +42,11 @@
     </div>
     <div class="developer">
         Designed & Developed by MING
-        <div>Version 0.3</div>
+        <div>Version 0.3.1</div>
     </div>
 </div>
+
 </body>
-<script>
-    let _hmt = _hmt || [];
-    (function() {
-        let hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?0edac443e19fdbd1042b287312a225e1";
-        let s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 <script src="/js/index.js"></script>
 <script src="/js/api.js"></script>
 </html>
