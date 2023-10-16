@@ -22,12 +22,14 @@
         background-size: 100%;
         /* backdrop-filter: blur(50px);*/
     }
+
     #dayTime {
         margin-top: 100px;
         display: flex;
         flex-flow: column;
         align-items: center;
     }
+
     #day {
         display: flex;
         flex-flow: row;
@@ -35,15 +37,18 @@
         font-size: 80px;
         font-weight: 666;
     }
+
     .timeLittle {
         width: 60px;
         text-align: center;
         line-height: 90px;
     }
-    .little{
+
+    .little {
         width: 100px;
         text-align: center;
     }
+
     #oneDay {
         color: white;
         font-size: 25px;
@@ -53,6 +58,7 @@
     .search {
         position: relative;
     }
+
 
     .searchBox {
         display: flex;
@@ -77,10 +83,12 @@
         line-height: 40px;
         padding: 5px;
     }
+
     #searchT img {
         width: 30px;
         height: 30px;
     }
+
     .searchBox:hover {
         box-shadow: 1px 1px 10px rgba(20, 20, 20, 0.5);
     }
@@ -113,19 +121,22 @@
         height: 316px;
         border: 1px solid white;
         border-radius: 16px;
-        background: rgba(210, 210, 210,0.3);
+        background: rgba(210, 210, 210, 0.3);
         color: white;
         backdrop-filter: blur(30px);
-       /* overflow: auto;
-        overflow-x: hidden;*/
+        /* overflow: auto;
+         overflow-x: hidden;*/
         /*backdrop-filter: blur(30px);*/
     }
+
     #searchOption:hover {
         box-shadow: 1px 1px 10px rgba(20, 20, 20, 0.5);
     }
+
     .option {
         padding: 10px;
     }
+
     .option li {
         width: 180px;
         height: 30px;
@@ -134,15 +145,31 @@
         border-radius: 9px;
         line-height: 30px;
     }
-    .option li:hover{
+
+    .option li:hover {
         background-color: rgba(140, 140, 140, 0.6);
         box-shadow: 1px 1px 10px rgba(20, 20, 20, 0.5);
 
     }
 
-    .developer {
+    #hitokoto {
+        position: relative;
+        bottom: 30px;
+    }
+
+    #hitokoto_text {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+    }
+
+    .bottom {
         position: absolute;
         bottom: 20px;
+        text-align: center;
+    }
+
+    .developer {
         color: rgba(255, 255, 255, 0.8);
         font-size: 12px;
     }
@@ -156,7 +183,7 @@
         <div class="timeLittle">:</div>
         <div class="little">00</div>
     </div>
-   <div id="oneDay">2023/10/16</div>
+    <div id="oneDay">2023/10/16</div>
 </div>
 <div class="search">
     <div class="searchBox">
@@ -177,10 +204,17 @@
         </ul>
     </div>
 </div>
-
-<div class="developer">Designed & Developed by MING
-    <div>Version 0.2</div>
+<div class="bottom">
+    <div id="hitokoto">
+        <p id="hitokoto_text">&nbsp;</p>
+    </div>
+    <div class="developer">
+        Designed & Developed by MING
+        <div>Version 0.2</div>
+    </div>
 </div>
+
 </body>
 <script src="/js/index.js"></script>
+<script src="/js/api.js"></script>
 </html>
