@@ -105,8 +105,7 @@ function getTime() {
     oneDay.innerText = year + '/' + month + "/" + date
 }
 
-//timeer = setInterval(getTime, 1000)
-
+timeer = setInterval(getTime, 1000)
 
 //toast弹窗
 function Toast(msg, duration) {
