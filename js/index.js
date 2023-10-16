@@ -13,6 +13,9 @@ let url6 = document.getElementById('url6')
 let url7 = document.getElementById('url7')
 let url8 = document.getElementById('url8')
 
+let day = document.getElementById('day')
+let oneDay = document.getElementById('oneDay')
+
 /*document.body.addEventListener("click", function() {
     if(c.style.display === "flex"){
         c.style.display = "none"
@@ -94,12 +97,12 @@ function getTime() {
     hour = hour < 10 ? '0' + hour : hour
     minute = minute < 10 ? '0' + minute : minute
     second = second < 10 ? '0' + second : second
-    let timeD = `${hour}:${minute}:${second}`
-    let timeY = `${year}/${month}/${date}`
-    let dTime = document.getElementById("dayTime")
-    console.log(dTime)
-    dTime.innerHTML = `<p>${timeD}</p><p class="tiemY" style="font-size: 20px ">${timeY}</p>`
-
+    day.innerHTML = `<div class="little">${hour}</div>
+        <div class="timeLittle">:</div>
+        <div class="little">${minute}</div>
+        <div class="timeLittle">:</div>
+        <div class="little">${second}</div>`
+    oneDay.innerText = year + '/' + month + "/" + date
 }
 
 timeer = setInterval(getTime, 1000)
