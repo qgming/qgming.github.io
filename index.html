@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MOON - 月球</title>
+    <title>MOON</title>
     <link rel="shortcut icon" href="/img/international.png" type="image/x-icon">
 </head>
 <style>
@@ -23,11 +23,31 @@
         /* backdrop-filter: blur(50px);*/
     }
     #dayTime {
-        margin-top: 80px;
-        font-size: 100px;
-        font-weight: 600;
+        margin-top: 100px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    #day {
+        display: flex;
+        flex-flow: row;
         color: white;
+        font-size: 80px;
+        font-weight: 666;
+    }
+    .timeLittle {
+        width: 60px;
         text-align: center;
+        line-height: 90px;
+    }
+    .little{
+        width: 100px;
+        text-align: center;
+    }
+    #oneDay {
+        color: white;
+        font-size: 25px;
+        font-weight: 666;
     }
 
     .search {
@@ -128,7 +148,16 @@
     }
 </style>
 <body>
-<div id="dayTime">&nbsp;</div>
+<div id="dayTime">
+    <div id="day">
+        <div class="little">00</div>
+        <div class="timeLittle">:</div>
+        <div class="little">00</div>
+        <div class="timeLittle">:</div>
+        <div class="little">00</div>
+    </div>
+   <div id="oneDay">2023/10/16</div>
+</div>
 <div class="search">
     <div class="searchBox">
         <div id="searchT"><img src="/img/international.png" alt=""></div>
@@ -140,7 +169,7 @@
             <li id="url1" data-url="https://www.baidu.com/s?wd=">&nbsp;&nbsp;百度</li>
             <li id="url2" data-url="https://bing.com/search?q=">&nbsp;&nbsp;Bing</li>
             <li id="url3" data-url="https://www.google.com/search?q=">&nbsp;&nbsp;Google</li>
-            <li id="url4" data-url="http://quark.sm.cn/s?q=">&nbsp;&nbsp;夸克搜索</li>
+            <li id="url4" data-url="https://quark.sm.cn/s?q=">&nbsp;&nbsp;夸克搜索</li>
             <li id="url5" data-url="https://www.bilibili.com/search?keyword=">&nbsp;&nbsp;哔哩哔哩</li>
             <li id="url6" data-url="https://www.so.com/s?q=">&nbsp;&nbsp;360搜索</li>
             <li id="url7" data-url="https://duckduckgo.com/?q=">&nbsp;&nbsp;DuckDuckGo</li>
