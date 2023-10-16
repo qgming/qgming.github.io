@@ -1,4 +1,4 @@
-//JS BY MING
+//JS BY MING 2023/10/16 15:26
 let a = document.getElementById('searchText')
 let b = document.getElementById('searchButton')
 let c = document.getElementById('searchOption')
