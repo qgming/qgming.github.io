@@ -142,6 +142,7 @@ body {
     height: 30px;
     margin-bottom: 8px;
     background-color: rgba(200, 200, 200, 0.6);
+    text-align: center;
     border-radius: 9px;
     line-height: 30px;
 }
