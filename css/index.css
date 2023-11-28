@@ -12,7 +12,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: rgba(180, 180, 180, 0.8);
-    background-image: url("https://www.todaybing.com/api/today/cn?size=hd");
+    background-image: url("https://api.ee123.net/img/");
     background-size: 100%;
     /* backdrop-filter: blur(50px);*/
 }
